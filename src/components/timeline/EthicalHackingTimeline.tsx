@@ -53,8 +53,7 @@ export function EthicalHackingTimeline() {
               key={index}
               title={tool.title}
               description={tool.description}
-              isLast={index === hackingTools.length - 1}
-            />
+              isLast={index === hackingTools.length - 1} index={0}            />
           ))}
         </div>
       </div>

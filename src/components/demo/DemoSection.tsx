@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Play } from 'lucide-react';
+import { X, Play, Star, Quote } from 'lucide-react';
 
 interface VideoCardProps {
   title: string;
@@ -14,7 +14,6 @@ export function VideoCard({
   title, 
   description, 
   thumbnail, 
-  videoUrl, 
   onPlay 
 }: VideoCardProps) {
   return (
@@ -163,5 +162,130 @@ export function DemoSection() {
         />
       </div>
     </section>
+  );
+}
+
+interface Feedback {
+  name: string;
+  role: string;
+  text: string;
+  avatarColor: string;
+}
+
+export function FeedbackSection() {
+  const feedbacks: Feedback[] = [
+    {
+      name: "Rajesh",
+      role: "MCA",
+      text: "This course completely transformed my understanding of Python. The practical approach and real-world examples made learning both fun and effective.",
+      avatarColor: "bg-purple-500"
+    },
+    {
+      name: "Basskaran",
+      role: "B.Tech CSE",
+      text: "Overall the Course is Great, In the Whole Sessions, I gained lot of knowledge about python and how to build ethical hacking tools.",
+      avatarColor: "bg-indigo-500"
+    },
+    {
+      name: "Rishi",
+      role: "EEE",
+      text: "As someone transitioning into tech, this course provided the perfect foundation. The step-by-step guidance gave me confidence in my coding and hacking skills.",
+      avatarColor: "bg-purple-600"
+    }
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 50 
+    },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  return (
+    <section className="py-20 bg-black">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">
+              What Our Learners Say
+            </span>
+          </h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            Hear from students who have transformed their careers and skills through our comprehensive programming courses.
+          </p>
+        </motion.div>
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid md:grid-cols-3 gap-8"
+        >
+          {feedbacks.map((feedback, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              className="bg-purple-900/10 backdrop-blur-lg rounded-xl p-6 relative overflow-hidden border border-purple-700/30 shadow-2xl"
+            >
+              <Quote className="absolute top-4 left-4 text-purple-700 opacity-20 w-16 h-16" />
+              
+              <div className="flex items-center mb-4">
+                <div 
+                  className={`w-12 h-12 rounded-full mr-4 flex items-center justify-center ${feedback.avatarColor} text-white font-bold`}
+                >
+                  {feedback.name.charAt(0)}
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white">{feedback.name}</h3>
+                  <p className="text-sm text-purple-300">{feedback.role}</p>
+                </div>
+              </div>
+              
+              <p className="text-gray-200 italic mb-4">"{feedback.text}"</p>
+              
+              <div className="flex space-x-1 text-yellow-500">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <Star key={star} className="w-5 h-5 fill-current" />
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+// Updated main component to include FeedbackSection
+export function CourseLanding() {
+  return (
+    <div className="bg-black">
+      <DemoSection />
+      <FeedbackSection />
+    </div>
   );
 }

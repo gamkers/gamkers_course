@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { AboutSection } from './components/about/AboutSection';
@@ -8,7 +8,7 @@ import { EthicalHackingTimeline } from './components/timeline/EthicalHackingTime
 import { DemoSection } from './components/demo/DemoSection';
 import { PrelaunchOffer } from './components/PrelaunchOffer';
 import { Footer } from './components/Footer';
-
+import { FeedbackSection } from './components/demo/DemoSection';
 function App() {
   return (
     <div className="min-h-screen bg-black text-white">
@@ -20,6 +20,7 @@ function App() {
         <PythonTimeline />
         <EthicalHackingTimeline />
         <DemoSection />
+        <FeedbackSection />
         <div id="prelaunch-offer">
           <PrelaunchOffer />
         </div>

@@ -62,8 +62,7 @@ export function PythonTimeline() {
               day={item.day}
               title={item.title}
               description={item.description}
-              isLast={index === pythonCurriculum.length - 1}
-            />
+              isLast={index === pythonCurriculum.length - 1} index={0}            />
           ))}
         </div>
       </div>
