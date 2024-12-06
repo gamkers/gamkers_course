@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, Copy, Check } from 'lucide-react';
 import { CountdownTimer } from './CountdownTimer';

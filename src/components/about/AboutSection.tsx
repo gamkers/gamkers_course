@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Code2, Terminal, Briefcase } from 'lucide-react';
 import { AboutCard } from './AboutCard';
 
