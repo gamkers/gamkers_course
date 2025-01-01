@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const INITIAL_TIME = {
-  days: 3,
+  days: 2,
   hours: 14,
   minutes: 20,
   seconds: 0

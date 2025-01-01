@@ -25,7 +25,7 @@ export function Hero() {
           </h1>
           
           <p className="text-xl text-gray-300 mb-8">
-            Prelaunch Price: <span className="text-purple-400 font-bold">₹499</span>
+            Offer Price: <span className="text-purple-400 font-bold">₹499</span>
             <span className="mx-2">|</span>
             Original Price: <span className="line-through">₹1000</span>
           </p>

@@ -5,7 +5,7 @@ import { CountdownTimer } from './CountdownTimer';
 
 export function PrelaunchOffer() {
   const [copied, setCopied] = useState(false);
-  const couponCode = "EARLYACCESS";
+  const couponCode = "NEWYEAR50";
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(couponCode);
@@ -36,7 +36,7 @@ export function PrelaunchOffer() {
             
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               <span className="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">
-                Limited Time Prelaunch Offer
+                New Year Offer
               </span>
             </h2>
             
