@@ -34,7 +34,7 @@ export function Header() {
               onClick={() => scrollToSection('prelaunch-offer')}
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full font-medium hover:from-purple-700 hover:to-blue-700 transition-all transform hover:scale-105"
             >
-              Enroll Now ₹499
+              Enroll Now ₹749
             </button>
           </nav>
 
@@ -58,7 +58,7 @@ export function Header() {
               onClick={() => scrollToSection('prelaunch-offer')}
               className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full font-medium hover:from-purple-700 hover:to-blue-700 transition-all"
             >
-              Enroll Now ₹499
+              Enroll Now ₹749
             </button>
           </nav>
         )}

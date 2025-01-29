@@ -25,9 +25,9 @@ export function Hero() {
           </h1>
           
           <p className="text-xl text-gray-300 mb-8">
-            Offer Price: <span className="text-purple-400 font-bold">₹499</span>
+           Student Offer Price: <span className="text-purple-400 font-bold">₹749</span>
             <span className="mx-2">|</span>
-            Original Price: <span className="line-through">₹1000</span>
+            Original Price: <span className="line-through">₹1500</span>
           </p>
 
           <div className="mb-12">
